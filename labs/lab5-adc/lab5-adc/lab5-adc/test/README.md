@@ -1,4 +1,4 @@
-# Lab 5: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 5: Jan Mucha
 
 ### Analog-to-Digital Conversion
 
@@ -6,24 +6,12 @@
 
    | **Push button** | **PC0[A0] voltage** | **ADC value (calculated)** | **ADC value (measured)** | **ADC value (measured, hex)** |
    | :-: | :-: | :-: | :-: | :-: |
-   | Right  | 0V | 0   | 0 | 0 |
-   | Up     | 0.495V | 101 |  |  |
-   | Down   | 1.203V | 246 |  |  |
-   | Left   | 1.969V | 402 |  |  |
-   | Select | 3.181V | 651 |  |  |
-   | none   | 5V | 1023 |  |  |
-
-
-| **Operation** | **Register(s)** | **Bit(s)** | **Description** |
-   | :-- | :-: | :-: | :-- |
-   | Voltage reference    | ADMUX | REFS1:0 | 00: ..., 01: AVcc voltage reference (5V), ... |
-   | Input channel        | ADMUX | MUX3:0 | 0000: ADC0, 0001: ADC1, ... |
-   | ADC enable           | ADCSRA | ADCE |  |
-   | Start conversion     | ADCSRA |  |  |
-   | ADC interrupt enable |  |  |  |
-   | ADC clock prescaler  |  | ADPS2:0 | 000: Division factor 2, 001: 2, 010: 4, ...|
-   | ADC 10-bit result    |  |  |  |
-
+   | Right  | 0&nbsp;V | 0   | 0 | 0 |
+   | Up     | 0.495&nbsp;V | 101 | 100  | 63 |
+   | Down   | 1.203&nbsp;V | 246 | 256 | 100 |
+   | Left   | 1.970&nbsp;V | 403 | 409 | 200 |
+   | Select | 3.181&nbsp;V | 650 | 640 | 27F |
+   | none   | 5&nbsp;V | 1023 | 1023 | 3FF |
 
 ### Temperature meter
 
@@ -31,8 +19,8 @@ Consider an application for temperature measurement. Use analog temperature sens
 
 2. Draw a schematic of temperature meter. The image can be drawn on a computer or by hand. Always name all components and their values.
 
-   ![your figure]()
+   ![image](https://user-images.githubusercontent.com/99410528/199301749-0bc132d1-f8c4-4e69-ae17-2c128f57102b.png)
 
 3. Draw two flowcharts for interrupt handler `TIMER1_OVF_vect` (which overflows every 1&nbsp;sec) and `ADC_vect`. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![your figure]()
+   ![image](https://user-images.githubusercontent.com/99410528/199301830-e1ae4ad0-876d-4301-b886-94a10ad367d5.png)
