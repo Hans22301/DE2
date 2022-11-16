@@ -9,13 +9,21 @@
    * I2C pins
    * SPI pins
    * external interrupt pins INT0, INT1
-
-
+   
+   | ** Functionality** | **Pins** |
+   | :-: | :-: |
+   | PWM generators | 3,5,6,9,10,11|
+   | ADC | 14,15,16,17,18,19 |
+   | UART | 0 (RX), 1(TX) |
+   | I2C | 18 (SDA), 19 (SCL) |
+   | SPI | 10 (SS), 11 (MISO), 12 (MOSI), 13 (SCK) |
+   | external interrupt pins INT0, INT1 | 2 (INT0),3 (INT1) |
+   
+   ![image](https://user-images.githubusercontent.com/99410528/202127027-90a01676-197b-4ea2-8c22-02a6fbec4cb4.png)
 
 ### I2C communication
 
 2. Draw a timing diagram of I2C signals when calling function `rtc_read_years()`. Let this function reads one byte-value from RTC DS3231 address `06h` (see RTC datasheet) in the range `00` to `99`. Specify when the SDA line is controlled by the Master device and when by the Slave device. Draw the whole request/receive process, from Start to Stop condition. The image can be drawn on a computer (by [WaveDrom](https://wavedrom.com/) for example) or by hand. Name all parts of timing diagram.
-
 
 
 ### Meteo station
@@ -24,3 +32,4 @@ Consider an application for temperature and humidity measurements. Use sensor DH
 
 3. Draw a flowchart of `TIMER1_OVF_vect` (which overflows every 1&nbsp;sec) for such Meteo station. The image can be drawn on a computer or by hand. Use clear description of individual algorithm steps.
 
+![image](https://user-images.githubusercontent.com/99410528/202127071-00dd16a4-c671-4ef2-ae8e-044a239532d8.png)
